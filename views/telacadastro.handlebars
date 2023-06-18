@@ -1,0 +1,92 @@
+<div class = "main">
+    <h1>Cadastre o médico e a sala aqui!</h1>
+ <form class = "formulario" action="/cadastro" method="POST">
+
+        <p>Médico: </p>
+        <input type="text" name="titulo">
+        <p>Sala: </p>
+        <input type="text" name="conteudo">
+        <p>Cargo: </p>
+        <input type="text" name="conteudo">
+        <button type="submit" onclick = "voltar(); return false">Cadastrar</button>
+
+    </form>  
+
+</div>
+<script>
+  function voltar(){
+
+              alert('Sucesso');
+            location.href = "2";
+                }
+                
+</script>
+<style>
+
+   
+body{
+    margin: 0;
+    font-family: 'Geologica', sans-serif;
+}
+body * {
+    box-sizing: border-box;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+.main >h1{
+    color: #ffffff;
+}
+.formulario {
+     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 100px;
+    background: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+.formulario > input{
+    color: #ffffff;
+    padding: 10px 110px;
+    background: #514869;
+    outline: none;
+    border: none;
+    box-shadow: 0px 10px 40px #00000056; 
+    border-radius: 5px;
+}
+
+.formulario > button{
+    width: 20.5vw;
+    padding: 30px;
+    height: 20%;
+    margin: 12px;
+    background:  #00ff88;
+    outline: none;
+    border: none;
+    box-shadow: 0px 10px 40px #00000056; 
+    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.formulario > button:hover{
+    background:  #68ffb9;
+}
+.formulario > p{
+    color: #f0ffffde;
+    font-size: 12pt;
+    
+}
+</style>

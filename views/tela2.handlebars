@@ -1,0 +1,308 @@
+ <div class ="main">
+    
+    <table class="tabela">
+        
+        <tr class="linha1">
+
+            <td>Mariany Sousa de Lima</td>
+            <td>B5</td>
+            <td>Cardióloga</td>
+
+            <td class="indisp"></td>
+            <td class="disp"></td>
+
+        </tr>
+
+        <tr class="linha2">
+            <td>Jóse Carlos Silveira</td>
+            <td>A10</td>
+            <td>Clínico Geral</td>
+
+           <td class="indisp2"></td>
+            <td class="disp2"></td>
+            
+        </tr>
+
+        <tr class="linha3">
+
+            <td>Carlos Silvio Viana</td>
+            <td>C12</td>
+            <td>Psiquiatra</td>
+
+            <td class="indisp3"></td>
+            <td class="disp3"></td>
+
+        </tr>
+
+    </table>  
+    <h1 class = "titulozinho">Cadastro de medicos no botão ao lado
+        <button onclick="cadastrar(); return false"></button>
+    </h1>
+    
+    
+</div> 
+
+      
+</div>
+<script>
+
+    
+    const linha1 = document.querySelector('.linha1');
+    const linha2 = document.querySelector('.linha2');
+    const linha3 = document.querySelector('.linha3');
+   
+     const indisp = document.querySelector('.indisp');
+     const disp = document.querySelector('.disp');
+     const indisp2 = document.querySelector('.indisp2');
+     const disp2 = document.querySelector('.disp2');
+     const indisp3 = document.querySelector('.indisp3');
+     const disp3 = document.querySelector('.disp3');
+
+        indisp.addEventListener('click', () => {
+            linha1.style.backgroundColor = 'rgb(185, 38, 38)';});
+        indisp.addEventListener('click', () => {
+            linha1.style.color = '#ffffff';});
+
+        disp.addEventListener('click', () => {
+            linha1.style.backgroundColor = '#00ff88';});
+        disp.addEventListener('click', () => {
+            linha1.style.color = '#ffffff';});
+
+        indisp2.addEventListener('click', () => {
+            linha2.style.backgroundColor = 'rgb(185, 38, 38)';});
+        indisp2.addEventListener('click', () => {
+            linha2.style.color = '#ffffff';});
+
+        disp2.addEventListener('click', () => {
+            linha2.style.backgroundColor = '#00ff88' ;});
+        disp2.addEventListener('click', () => {
+            linha2.style.color = '#ffffff';});
+
+        indisp3.addEventListener('click', () => {
+            linha3.style.backgroundColor = 'rgb(185, 38, 38)';});
+        indisp3.addEventListener('click', () => {
+            linha3.style.color = '#ffffff';});
+
+        disp3.addEventListener('click', () => {
+            linha3.style.backgroundColor = '#00ff88' ;});
+        disp3.addEventListener('click', () => {
+            linha3.style.color = '#ffffff';});
+
+         /*   disp2.addEventListener('click', () => {
+            linha2.style.boxShadow = '-70px 10px 40px #ff0056';});*/
+            
+     function cadastrar(){
+            location.href = "3";
+                }
+                
+</script>
+
+<style>
+
+body{
+    margin: 0;
+    font-family: 'Geologica', sans-serif;
+}
+body * {
+    box-sizing: border-box;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+table {
+    width: 600px;
+    height: 30px;
+    margin: 5px;
+    
+}
+td {
+    border: 1px solid black;
+    padding: 16px;
+    border-radius: 5px;
+    outline: none;
+}
+.indisp{
+    color: #2b134b;
+        background-color: rgb(185, 38, 38);
+    width: 60px;
+    height: 1px;
+    align-items: end;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+}
+.indisp:hover{
+    color: #ffffff;
+    background-color: rgb(179, 79, 79);
+}
+.indisp:active{
+    background-color: rgb(146, 108, 108);
+}.disp{
+    color: #2b134b;
+    background-color: #00ff88;
+    width: 60px;
+    height: 1px;
+    align-items: end;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+}
+    .disp:hover{
+    color: #ffffff;
+    background-color: #99ffcf;
+}
+.disp:active{
+    background-color: #62977e;
+    }
+.indisp2{
+    color: #2b134b;
+    background-color: rgb(185, 38, 38);
+    width: 60px;
+    height: 1px;
+    align-items: end;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+}
+.indisp2:hover{
+    color: #ffffff;
+    background-color: rgb(179, 79, 79);
+}
+.indisp2:active{
+    background-color: rgb(146, 108, 108);
+}
+.disp2{
+    color: #2b134b;
+    background-color: #00ff88;
+    width: 60px;
+    height: 1px;
+    align-items: end;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+}
+.disp2:hover{
+    color: #ffffff;
+    background-color: #99ffcf;
+}
+.disp2:active{
+    background: #62977e;
+    }
+    
+.linha1{
+    width: 40%;
+    height: 10%;
+    background-color: #ffffff;
+    transition: background-color 0.4s;
+}
+.linha2{
+    width: 40%;
+    height: 10%;
+    background-color: #ffffff;
+    transition: background-color 0.4s;
+}
+.linha3{
+    width: 40%;
+    height: 10%;
+    background-color: #ffffff;
+    transition: background-color 0.4s;
+}
+.cadastrador {
+    margin: 0vw;
+    background-color:#00ff88;
+    width: 5%;
+    height: 5%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.indisp3{
+    color: #2b134b;
+    background-color: rgb(185, 38, 38);
+    width: 60px;
+    height: 1px;
+    align-items: end;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+}
+.indisp3:hover{
+    color: #ffffff;
+    background-color: rgb(179, 79, 79);
+}
+.indisp3:active{
+    background-color: rgb(146, 108, 108);
+}
+.disp3{
+    color: #2b134b;
+    background-color: #00ff88;
+    width: 60px;
+    height: 1px;
+    align-items: end;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+}
+.disp3:hover{
+    color: #ffffff;
+    background-color: #99ffcf;
+}
+.disp3:active{
+    background: #62977e;
+    }
+
+
+
+.cadastrador:hover{
+    color: #ffffff;
+    background-color: #7bffc1;
+}
+.cadastrador:active{
+    background: #75ffbf;
+    }
+.tabela{
+
+    margin: 6px;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+.titulozinho{
+    background: #2f2841 ;
+    font-size: 15pt;
+    color: #ffffff;
+    padding: 10px 74px;
+    box-shadow: 0px 10px 40px #00000056;
+    margin: 20px;
+    border-radius: 9px;
+}
+.titulozinho > button {
+    
+    padding: 2vw;
+    background-color: #514869;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px #00000056;
+}
+.titulozinho > button:hover {
+    background-color: #685d86;
+}
+</style>
