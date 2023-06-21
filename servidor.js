@@ -46,6 +46,9 @@ const Sequelize = require('sequelize')
     
 
 })
+app.get('/4', function(req, res){
+    res.render('telaficha')
+})
 
     app.listen(8081, function(){
         console.log("Servidor ta rodando em http://localhost:8081");

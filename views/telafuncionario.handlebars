@@ -1,115 +1,176 @@
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Fundo de tela-->
 <div class ="main">
-    
-    <table class="tabela">
-        
-        <tr class="linha1">
+    <!-- Painel Lateral-->
+    <div class="esquerda">
+        <nav class="menu-lateral">
+            <div class="btn-expandir">
+                <i class="bi bi-list" id="btn-exp"></i>
+            </div>
+    <ul>
+        <li class="item-menu ativo">
+            <a href="#">
+                <span class="icon"><i class="bi bi-house-door"></i></span>
+                <span class="txt-link">Home</span>
+            </a>
+        </li>
+        <li class="item-menu">
+            <a href="#">
+                <span class="icon"><i class="bi bi-heart-pulse"></i></span>
+                <span class="txt-link">Medicos</span>
+            </a>
+        </li>
+        <li class="item-menu">
+            <a href="#">
+                <span class="icon"><i class="bi bi-info-circle"></i></span>
+                <span class="txt-link">Sobre</span>
+            </a>
+        </li>
+    </ul>
+        </nav>  
+</div>
+    <!-- Tabela de médicos-->
+    <div class="direita">
+        <table>
+            <tr class="linha1">
+                <td>Mariany Sousa de Lima</td>
+                <td>B5</td>
+                <td>Cardióloga</td>
 
-            <td>Mariany Sousa de Lima</td>
-            <td>B5</td>
-            <td>Cardióloga</td>
+                <td class="indisp"></td>
+                <td class="disp"></td>
+            </tr>
 
-            <td class="indisp"></td>
-            <td class="disp"></td>
+            <tr class="linha2">
+                <td>Jóse Carlos Silveira</td>
+                <td>A10</td>
+                <td>Clínico Geral</td>
 
-        </tr>
-
-        <tr class="linha2">
-            <td>Jóse Carlos Silveira</td>
-            <td>A10</td>
-            <td>Clínico Geral</td>
-
-           <td class="indisp2"></td>
-            <td class="disp2"></td>
+                <td class="indisp2"></td>
+                <td class="disp2"></td>
             
             <tr class="linha3">
 
-            <td>Carlos Silvio Viana</td>
-            <td>C12</td>
-            <td>Psiquiatra</td>
+                <td>Carlos Silvio Viana</td>
+                <td>C12</td>
+                <td>Psiquiatra</td>
 
-            <td class="indisp3"></td>
-            <td class="disp3"></td>
-            
-        </tr>
+                <td class="indisp3"></td>
+                <td class="disp3"></td>
 
-    </table>  
-       
-</div> 
-
-      
-</div>
-<script>
-
-    const linha1 = document.querySelector('.linha1');
-    const linha2 = document.querySelector('.linha2');
-    const linha3 = document.querySelector('.linha3');
-   
-    const indisp = document.querySelector('.indisp');
-    const disp = document.querySelector('.disp');
-    const indisp2 = document.querySelector('.indisp2');
-    const disp2 = document.querySelector('.disp2');
-    const indisp3 = document.querySelector('.indisp3');
-    const disp3 = document.querySelector('.disp3');
-
-        indisp.addEventListener('click', () => {
-            linha1.style.backgroundColor = 'rgb(185, 38, 38)';});
-        indisp.addEventListener('click', () => {
-            linha1.style.color = '#ffffff';});
-
-        disp.addEventListener('click', () => {
-            linha1.style.backgroundColor = '#00ff88';});
-        disp.addEventListener('click', () => {
-            linha1.style.color = '#ffffff';});
-
-        indisp2.addEventListener('click', () => {
-            linha2.style.backgroundColor = 'rgb(185, 38, 38)';});
-        indisp2.addEventListener('click', () => {
-            linha2.style.color = '#ffffff';});
-
-        disp2.addEventListener('click', () => {
-            linha2.style.backgroundColor = '#00ff88' ;});
-        disp2.addEventListener('click', () => {
-            linha2.style.color = '#ffffff';});
-            
-             indisp3.addEventListener('click', () => {
-            linha3.style.backgroundColor = 'rgb(185, 38, 38)';});
-        indisp3.addEventListener('click', () => {
-            linha3.style.color = '#ffffff';});
-
-        disp3.addEventListener('click', () => {
-            linha3.style.backgroundColor = '#00ff88' ;});
-        disp3.addEventListener('click', () => {
-            linha3.style.color = '#ffffff';});
-
-         /*   disp2.addEventListener('click', () => {
-            linha2.style.boxShadow = '-70px 10px 40px #ff0056';});*/
-                 
-</script>
+            </tr>
+        </table>   
+    </div> 
+</div>   
 
 <style>
 
 body{
     margin: 0;
-    font-family: 'Geologica', sans-serif;
+    font-family: 'Geologica', sans-serif;  
 }
 body * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+/*Menu lateral*/
+.esquerda{
+    flex-direction: column;
+    width: 30vw;
+    height: 100vh;
+    justify-content: center;
+
+}
+.esquerda > nav.menu-lateral{
+    
+    flex-direction: column;
+    width: 90px;
+    height: 100%;
+    background-color: #77ffc0;
+    padding: 40px 0 40px 7%;
+    box-shadow: 5px 0 0 #ffffff;
+    overflow: hidden;
+    transition: .4s;
+}
+.esquerda > nav.menu-lateral.expandir{
+    width: 300px;
+}
+.btn-expandir{
+    width: 100px;
+    padding-left: 7px;
+}
+.btn-expandir > i{
+    font-size: 24px;
+    cursor: pointer;
+}
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+ul li.item-menu{
+    transition: .2s;
+}
+ul li.ativo{
+    background-color: #ffffff;   
+}
+
+ul li.item-menu:hover{
+    background-color: #ffffff;  
+}
+ul li.item-menu a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+ul li.item-menu a .txt-link {
+    margin-left: 70px;
+    transition: .5s;
+    opacity: 0;
+}
+.esquerda > nav.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon i{
+    font-size: 30px;
+}
+.direita{
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+/*tela de fundo*/
 .main{
+    
     width: 100vw;
     height: 100vh;
     background-color: #201b2c;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-table {
-    width: 600px;
-    height: 30px;
-    margin: 5px;
     
+}
+/*tabela de medicos*/
+table {
+    
+    margin-right: 470px;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 35px;
+    background: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
 }
 td {
     border: 1px solid black;
@@ -117,6 +178,7 @@ td {
     border-radius: 5px;
     outline: none;
 }
+/*Botoões*/
 .indisp{
     color: #2b134b;
     background-color: rgb(185, 38, 38);
@@ -219,35 +281,87 @@ td {
 .disp3:active{
     background: #62977e;
 }
+/*Linhas da tabela*/
 .linha1{
     width: 40%;
     height: 10%;
-    background-color: #ffffff;
+    background-color: #8778ac;
     transition: background-color 0.4s;
+    color: #ffffff;
 }
 .linha2{
     width: 40%;
     height: 10%;
-    background-color: #ffffff;
+    background-color: #8778ac;
     transition: background-color 0.4s;
+    color: #ffffff;
 }
 .linha3{
     width: 40%;
     height: 10%;
-    background-color: #ffffff;
+    background-color: #8778ac;
     transition: background-color 0.4s;
-}
-.tabela{
-
-    margin: 6px;
-    height: 10vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 35px;
-    background: #2f2841;
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px #00000056;
+    color: #ffffff;
 }
 </style>
+<script>
+    /*constantes das linhas*/
+    const linha1 = document.querySelector('.linha1');
+    const linha2 = document.querySelector('.linha2');
+    const linha3 = document.querySelector('.linha3');
+    /*constantes dos botões*/
+    const indisp = document.querySelector('.indisp');
+    const disp = document.querySelector('.disp');
+    const indisp2 = document.querySelector('.indisp2');
+    const disp2 = document.querySelector('.disp2');
+    const indisp3 = document.querySelector('.indisp3');
+    const disp3 = document.querySelector('.disp3');
+    /*varchar do painel lateral*/
+    var menuItem = document.querySelectorAll('.item-menu')
+    var btnExp = document.querySelector('#btn-exp')
+    var menuSide = document.querySelector('.menu-lateral')
+    /*funções para expandir a tela*/
+    btnExp.addEventListener('click', function(){
+        menuSide.classList.toggle('expandir')
+})
+        function selectLink(){
+            menuItem.forEach((item)=>
+                item.classList.remove('ativo')
+                )
+        this.classList.add('ativo')
+}
+    menuItem.forEach((item)=>
+        item.addEventListener('click', selectLink)
+)
+        /*funções para os botões alterarem as cores*/
+        indisp.addEventListener('click', () => {
+            linha1.style.backgroundColor = 'rgb(185, 38, 38)';});
+        indisp.addEventListener('click', () => {
+            linha1.style.color = '#ffffff';});
+
+        disp.addEventListener('click', () => {
+            linha1.style.backgroundColor = '#00ff88';});
+        disp.addEventListener('click', () => {
+            linha1.style.color = '#ffffff';});
+
+        indisp2.addEventListener('click', () => {
+            linha2.style.backgroundColor = 'rgb(185, 38, 38)';});
+        indisp2.addEventListener('click', () => {
+            linha2.style.color = '#ffffff';});
+
+        disp2.addEventListener('click', () => {
+            linha2.style.backgroundColor = '#00ff88' ;});
+        disp2.addEventListener('click', () => {
+            linha2.style.color = '#ffffff';});
+            
+             indisp3.addEventListener('click', () => {
+            linha3.style.backgroundColor = 'rgb(185, 38, 38)';});
+        indisp3.addEventListener('click', () => {
+            linha3.style.color = '#ffffff';});
+
+        disp3.addEventListener('click', () => {
+            linha3.style.backgroundColor = '#00ff88' ;});
+        disp3.addEventListener('click', () => {
+            linha3.style.color = '#ffffff';});
+
+</script>
